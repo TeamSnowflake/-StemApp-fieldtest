@@ -1,0 +1,27 @@
+
+<div class="section section-content">
+<!-- Refresh script to let the page refresh every 10 seconds-->
+ <script>
+	setTimeout(function(){
+	window.location.reload(1);
+	}, 10000);
+	</script>
+	  <div class="wrapper">
+		<div class="window">
+		  <div class="window-content">
+			<div class="window-header">{{ $ctrl.vote.title }}<a class="back" ui-sref="votes"><em class="mdi mdi-arrow-left"> </em>Back</a></div>
+			<div class="window-body pad pad-top-10">
+			  <p class="text">{{ $ctrl.vote.description }}</p>
+			  <div class="chart-container" ng-if="$ctrl.countResponses != 0">
+				<canvas id="myChart" width="400" height="400"></canvas>
+				<div class="chart-desc">
+				   Aantal uitgebrachte stemmen: <strong>{{ $ctrl.countResponses }}</strong></div>
+			  </div>
+			  <div class="window-body" ng-if="$ctrl.countResponses == 0"><br/><br/>
+				<p class="text-center">No votes yet</p><br/><br/>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
