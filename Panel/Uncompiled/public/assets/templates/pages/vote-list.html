@@ -1,0 +1,42 @@
+
+<div class="section section-content">
+  <div class="wrapper">
+    <div class="window">
+      <div class="window-content">
+        <div class="window-header">Lijst met stelling </div>
+        <div class="table" ng-if="$ctrl.votes.length &gt; 0">
+          <table>
+            <tHead>
+              <tr>
+                <th>Titel</th>
+                <th>Status</th>
+                <th>Beschrijving</th>
+                <th>Activeren</th>
+                <th class="text-right">Acties</th>
+              </tr>
+            </tHead>
+            <tBody>
+              <tr ng-repeat="vote in $ctrl.votes">
+                <td ng-bind="vote.title"></td>
+                <td ng-bind="vote.state"></td>
+                <td ng-bind="vote.description"></td>
+                <td>
+                  <div class="button button-primary-outline button-narrow" ng-if="vote.state != 'active'" ng-click="$ctrl.voteActivate(vote)">Activeren</div>
+                </td>
+                <td class="actions text-right">
+                  <div class="action-item" ng-if="vote.state != 'pending'" ui-sref="vote-view({id: vote.id})"><em class="mdi mdi-eye"></em>Bekijken</div>
+                  <div class="action-item" ng-if="vote.state == 'pending'" ui-sref="vote-edit({id: vote.id})"><em class="mdi mdi-pencil"></em>Aanpassen</div>
+                  <div class="action-item" ng-if="vote.state != 'active'" ng-click="$ctrl.voteDestroy(vote)"><em class="mdi mdi-delete"></em>Verwijderen</div>
+                </td>
+              </tr>
+            </tBody>
+          </table>
+        </div>
+        <div class="window-body" ng-if="$ctrl.votes.length == 0"><br/><br/>
+          <p class="text-center">List is empty</p><br/><br/>
+        </div>
+      </div>
+      <div class="window-actions"><a class="button button-primary" ui-sref="vote-create">Nieuwe stelling</a></div>
+    </div>
+  </div>
+</div>

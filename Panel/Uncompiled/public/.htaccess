@@ -1,0 +1,13 @@
+##Force password protection over whole domain##
+AuthType Basic
+AuthName "Password Protected Area"
+AuthUserFile /var/www/stemapp-panel/public/.htpasswd
+Require valid-user
+
+##Make sure we can refresh results page##
+RewriteEngine On 
+Options FollowSymLinks
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /#/$1 [L]
