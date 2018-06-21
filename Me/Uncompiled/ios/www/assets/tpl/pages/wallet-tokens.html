@@ -1,0 +1,20 @@
+
+<div class="view-content">
+  <div class="list-resources">
+    <div class="resource-item" ng-repeat="token in $ctrl.tokens">
+      <div class="resource-btn-left" ng-click="$ctrl.sendTokens(token)">
+        <div class="resource-btn-inner">
+          <div class="mdi mdi-chevron-up"></div>Send
+        </div>
+      </div>
+      <div class="resource-value" ng-bind="token.amount"></div>
+      <div class="resource-label" ng-bind="token.name"></div>
+      <div class="resource-btn-right" ng-click="$ctrl.askTokens(token)">
+        <div class="resource-btn-inner">
+          <div class="mdi mdi-chevron-down"></div>Ask
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<account-footer></account-footer>

@@ -1,0 +1,49 @@
+
+<div class="view-content">
+  <div class="list-group-list">
+    <div class="list-group-items">
+          <div class="list-group-item">
+            <div ng-click="$ctrl.show = !$ctrl.show"><img class="list-group-icon" src="assets/img/icon-records-personal.png"/>
+              <div class="list-group-title">Personal</div>
+              <div class="list-group-subtitle text-primary">
+                 {{ $ctrl.recordCount + ' records' }}</div>
+              <div class="list-group-arrow mdi mdi-chevron-down" ng-show="!$ctrl.show"></div>
+              <div class="list-group-arrow mdi mdi-chevron-up" ng-show="$ctrl.show"></div>
+            </div>
+            <div class="list-group-subitems" ng-show="$ctrl.show">
+              <div class="list-group-subitem" ng-repeat="record in $ctrl.records" ng-click="$ctrl.validate(record)" ng-class="{&quot;list-group-subitem-checked&quot; : record.state == &quot;valid&quot;}"> 
+                <div class="list-group-subitem-label" ng-bind="record.name"></div>
+                <div class="list-group-subitem-value" ng-bind="record.value"></div>
+                <div class="list-group-subitem-icon mdi mdi-check"></div>
+              </div>
+            </div>
+          </div>
+          <div class="list-group-item"><img class="list-group-icon" src="assets/img/icon-records-medical.png"/>
+            <div class="list-group-title">Medical</div>
+            <div class="list-group-subtitle text-muted"> Empty</div>
+            <div class="list-group-arrow mdi mdi-chevron-down"></div>
+          </div>
+          <div class="list-group-item"><img class="list-group-icon" src="assets/img/icon-records-professional.png"/>
+            <div class="list-group-title">Professional</div>
+            <div class="list-group-subtitle text-muted"> Empty</div>
+            <div class="list-group-arrow mdi mdi-chevron-down"></div>
+          </div>
+          <div class="list-group-item"><img class="list-group-icon" src="assets/img/icon-records-relations.png"/>
+            <div class="list-group-title">Relations</div>
+            <div class="list-group-subtitle text-muted"> Empty</div>
+            <div class="list-group-arrow mdi mdi-chevron-down"></div>
+          </div>
+          <div class="list-group-item"><img class="list-group-icon" src="assets/img/icon-records-licences.png"/>
+            <div class="list-group-title">Licences</div>
+            <div class="list-group-subtitle text-muted"> Empty</div>
+            <div class="list-group-arrow mdi mdi-chevron-down"></div>
+          </div>
+          <div class="list-group-item"><img class="list-group-icon" src="assets/img/icon-records-other.png"/>
+            <div class="list-group-title">Other</div>
+            <div class="list-group-subtitle text-muted"> Empty</div>
+            <div class="list-group-arrow mdi mdi-chevron-down"></div>
+          </div>
+    </div>
+  </div>
+</div>
+<account-footer></account-footer>

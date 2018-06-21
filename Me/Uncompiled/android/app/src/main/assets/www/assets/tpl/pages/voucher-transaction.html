@@ -1,0 +1,25 @@
+
+<div class="view-content"><br/>
+  <div class="hero">
+    <div class="hero-title">{{ $ctrl.voucher.amount }} KDC</div>
+    <div class="hero-subtitle">Transfer</div>
+  </div>
+  <div class="text text-muted text-center">
+     Move your Kindpakket Coins to Identity App</div>
+</div>
+<div class="view-footer">
+  <div class="row">
+    <div class="col col-2"><a class="button button-dim button-wide" href="#" ui-sref="wallet-tokens">CANCEL</a></div>
+    <div class="col col-2"><a class="button button-success button-wide" href="#" ng-click="$ctrl.accept()">ACCEPT</a></div>
+  </div>
+</div>
+<div class="popup" ng-if="$ctrl.showAccepted">
+  <div class="popup-backdrop"></div>
+  <div class="popup-content">
+    <div class="popup-content-inner">
+      <div class="popup-icon"><em class="mdi mdi-check"></em></div>
+      <div class="popup-title">Tokens transferred!</div>
+      <div class="button button-success button-wide" ui-sref="records">CLOSE</div>
+    </div>
+  </div>
+</div>

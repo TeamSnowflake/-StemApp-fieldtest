@@ -1,0 +1,30 @@
+
+<div class="view-content">
+  <div class="qr-code-element qr-code-element-lg" id="qrcode"></div>
+  <div class="hero">
+    <div class="hero-title">{{ $ctrl.request.amount }} {{ $ctrl.request.token.name }}</div>
+    <div class="hero-subtitle">Requested</div>
+  </div>
+  <div class="text text-center text-muted">Let somebody scan your personal QR-Code to send you tokens, assets or tickets</div>
+</div>
+<account-footer></account-footer>
+<div class="popup" ng-if="$ctrl.showAccepted">
+  <div class="popup-backdrop"></div>
+  <div class="popup-content">
+    <div class="popup-content-inner">
+      <div class="popup-icon"><em class="mdi mdi-check"></em></div>
+      <div class="popup-title">Success!</div>
+      <div class="button button-success button-wide" ui-sref="wallet-tokens">CLOSE</div>
+    </div>
+  </div>
+</div>
+<div class="popup" ng-if="$ctrl.showDeclined">
+  <div class="popup-backdrop"></div>
+  <div class="popup-content">
+    <div class="popup-content-inner">
+      <div class="popup-icon"><em class="mdi mdi-close"></em></div>
+      <div class="popup-title">Declined!</div>
+      <div class="button button-success button-wide" ui-sref="wallet-tokens">CLOSE</div>
+    </div>
+  </div>
+</div>

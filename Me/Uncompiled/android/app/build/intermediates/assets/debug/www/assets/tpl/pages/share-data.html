@@ -1,0 +1,50 @@
+
+<div class="view-content">
+  <div class="text">This app requests following information from your identity:</div>
+  <div class="list">
+    <div class="list-item" ng-repeat="item in $ctrl.items"><em class="mdi mdi-check icon"></em>{{ item }}</div>
+  </div>
+  <div class="form">
+    <label class="form-label">ALLOW IT FOR</label>
+    <div class="form-group">
+      <select class="form-control">
+        <option value="#">1 hour</option>
+        <option value="#">6 hour</option>
+        <option value="#">12 hour</option>
+        <option value="#">1 day</option>
+        <option value="#">7 day</option>
+        <option value="#">1 month</option>
+        <option value="#">6 months</option>
+        <option value="#">1 year</option>
+        <option value="#">5 years</option>
+        <option value="#">forever</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="view-footer">
+  <div class="row">
+    <div class="col col-2"><a class="button button-primary button-wide" href="#" ng-click="$ctrl.decline()">DECLINE</a></div>
+    <div class="col col-2"><a class="button button-success button-wide" href="#" ng-click="$ctrl.accept()">ACCEPT</a></div>
+  </div>
+</div>
+<div class="popup" ng-if="$ctrl.showAccepted">
+  <div class="popup-backdrop"></div>
+  <div class="popup-content">
+    <div class="popup-content-inner">
+      <div class="popup-icon"><em class="mdi mdi-check"></em></div>
+      <div class="popup-title">Success logged in!</div>
+      <div class="button button-success button-wide" ui-sref="records">CLOSE</div>
+    </div>
+  </div>
+</div>
+<div class="popup" ng-if="$ctrl.showDeclined">
+  <div class="popup-backdrop"></div>
+  <div class="popup-content">
+    <div class="popup-content-inner">
+      <div class="popup-icon"><em class="mdi mdi-check"></em></div>
+      <div class="popup-title">Request declined!</div>
+      <div class="button button-success button-wide" ui-sref="records">CLOSE</div>
+    </div>
+  </div>
+</div>

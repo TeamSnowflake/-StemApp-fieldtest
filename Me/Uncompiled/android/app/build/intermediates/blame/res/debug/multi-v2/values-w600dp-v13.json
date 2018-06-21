@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/ernstjan/Documents/research-and-development-develop/demo002-me/demo/phonegap/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w600dp-v13/values-w600dp-v13.xml",
+            "map": [
+                {
+                    "source": "/home/ernstjan/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.1.0.aar/f0fbffd6f0a98f3d1eba396b0e888a93/res/values-w600dp/values-w600dp.xml",
+                    "from": {
+                        "startLines": "4,5",
+                        "startColumns": "4,4",
+                        "startOffsets": "290,354",
+                        "endColumns": "63,54",
+                        "endOffsets": "349,404"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,119",
+                        "endColumns": "63,54",
+                        "endOffsets": "114,169"
+                    }
+                }
+            ]
+        }
+    ]
+}

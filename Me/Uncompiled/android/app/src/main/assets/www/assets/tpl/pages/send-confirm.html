@@ -1,0 +1,18 @@
+
+<div class="view-content">
+  <div class="hero">
+    <div class="hero-title">{{ $ctrl.params.amount }} {{ $ctrl.params.token.name }}</div>
+    <div class="hero-subtitle">Sending</div>
+  </div>
+</div>
+<div class="view-footer"><a class="button button-success button-wide" ng-click="$ctrl.send()">CONFIRM</a></div>
+<div class="popup" ng-if="$ctrl.showSuccess">
+  <div class="popup-backdrop"></div>
+  <div class="popup-content">
+    <div class="popup-content-inner">
+      <div class="popup-icon"><em class="mdi mdi-check"></em></div>
+      <div class="popup-title">Success!</div>
+      <div class="button button-success button-wide" ui-sref="wallet-tokens">CLOSE</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<body onload="$ctrl.fillStd()">
+<div class="view-content">
+  <form class="form" action="/" ng-submit="$ctrl.submit()">
+    <div class="form-group">
+      <label class="form-label" for="first_name">FIRST NAME</label>
+      <input class="form-control" name="first_name" id="first_name" type="text" placeholder="First name" ng-model="$ctrl.form.values.first_name"/>
+      <div class="form-error" ng-repeat="error_msg in $ctrl.form.errors.first_name" ng-bind="error_msg"></div>
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="last_name">LAST NAME</label>
+      <input class="form-control" name="last_name" id="last_name" type="text" placeholder="Last name" ng-model="$ctrl.form.values.last_name"/>
+      <div class="form-error" ng-repeat="error_msg in $ctrl.form.errors.last_name" ng-bind="error_msg"></div>
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="bsn" style="display: none;" >BSN</label>
+      <input class="form-control" name="bsn" id="bsn" value="12345678" style="display: none;" placeholder="12345678" type="text" ng-model="$ctrl.form.values.bsn"/>
+      <div class="form-error" style="display: none;" ng-repeat="error_msg in $ctrl.form.errors.bsn" ng-bind="error_msg"></div>
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="email">E-MAIL</label>
+      <input class="form-control" name="email" id="email" type="text" placeholder="Your E-mail" ng-model="$ctrl.form.values.email"/>
+      <div class="form-error" ng-repeat="error_msg in $ctrl.form.errors.email" ng-bind="error_msg"></div>
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="phone">TELEPHONE NUMBER</label>
+      <input class="form-control" name="phone" id="phone" type="text" placeholder="Your Telephone number" ng-model="$ctrl.form.values.phone"/>
+      <div class="form-error" ng-repeat="error_msg in $ctrl.form.errors.phone" ng-bind="error_msg"></div>
+    </div>
+  </form>
+</div>
+<div class="view-footer">
+  <div class="row">
+    <div class="col col-2"><a class="button button-success button-wide" ng-click="$ctrl.submit()">ADD PROFILE</a></div>
+    <div class="col col-2"><a class="button button-dim button-wide" ng-click="$ctrl.fillStd()">FILL DEMO</a></div>
+  </div>
+</div>
+</body>

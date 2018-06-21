@@ -1,0 +1,21 @@
+
+<div class="view-content">
+  <div class="form">
+    <div class="form-group">
+      <label class="form-label">DESCRIPTION</label>
+      <input class="form-control" ng-model="$ctrl.form.values.description" type="text" placeholder="Description Here"/>
+      <div class="form-error" ng-if="$ctrl.form.errors.description" ng-repeat="err_smg in $ctrl.form.errors.description" ng-bind="err_smg"></div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">AMOUNT</label>
+      <input class="form-control" ng-model="$ctrl.form.values.amount" type="number" placeholder="Fill in Amount"/>
+      <div class="form-error" ng-if="$ctrl.form.errors.amount" ng-repeat="err_smg in $ctrl.form.errors.amount" ng-bind="err_smg"></div>
+    </div>
+  </div>
+</div>
+<div class="view-footer">
+  <div class="row">
+    <!-- .col.col-2: a(href="#" ui-sref="send-address").button.button-primary.button-wide ADDRESS-->
+    <div class="col col-4"><a class="button button-dim button-wide" ng-click="$ctrl.scanCode()">SCAN QR</a></div>
+  </div>
+</div>
