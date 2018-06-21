@@ -1,0 +1,16 @@
+
+<div class="popup popup-notification active">
+  <div class="popup-backdrop" ng-click="modal.confirm ? false : modal.close($event)"></div>
+  <div class="popup-inner">
+    <div class="popup-content"><a class="popup-close mdi mdi-close" href="#" ng-if="!modal.confirm" ng-click="modal.close($event)"></a>
+      <div class="modal-notification" ng-class="{{['modal-notification-' + modal.type]}}">
+        <div class="modal-notification-title"><em class="mdi" ng-class="modal.icon"> </em>{{ modal.title }}</div>
+        <div class="modal-notification-desc" ng-bind="modal.desc"></div>
+        <div class="modal-notification-desc-lg" ng-bind="modal.descLarge"></div>
+        <div class="text-center" ng-if="modal.confirm"><br/>
+          <div class="button button-primary button-sm" ng-click="modal.confirm(); modal.close($event)" ng-bind="modal.confirmText || 'OK'"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

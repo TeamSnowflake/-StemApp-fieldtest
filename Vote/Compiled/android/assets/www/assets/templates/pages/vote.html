@@ -1,0 +1,22 @@
+
+<div class="app-view app-view-ios">
+  <div class="app-container">
+    <div class="vote" ng-if="$ctrl.vote">
+      <div class="vote-title" ng-bind="$ctrl.vote.title"></div>
+      <div class="vote-description" ng-bind="$ctrl.vote.description"></div>
+      <div class="vote-list">
+        <div class="vote-item" ng-repeat="option in $ctrl.vote.options">
+          <input ng-model="$ctrl.selectedOption" value="{{ option.id }}" type="radio" name="vote_option" id="vote_item_{{ option.id }}" hidden="hidden"/>
+          <label for="vote_item_{{ option.id }}">{{ option.value }}
+            <div class="vote-item-circle">
+              <div class="mdi mdi-check"></div>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="app-footer">
+    <div class="button button-wide button-primary text-center" ng-disabled="!$ctrl.selectedOption" ng-click="$ctrl.submitVote($ctrl.selectedOption)">Stem!</div>
+  </div>
+</div>

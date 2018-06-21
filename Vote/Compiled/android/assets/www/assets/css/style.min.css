@@ -1,0 +1,550 @@
+/*==========  Style Sheet - Vars  ==========*/
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, b, i, li, td {
+    font-family: "Roboto", arial, sans-serif;
+    font-weight: 300;
+    color: inherit;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul li {
+    font: 300 16px/28px "Roboto", arial, sans-serif;
+}
+
+p, b {
+    font: 300 16px/28px "Roboto", arial, sans-serif;
+    margin: 0 0 16px;
+}
+
+p a, b a {
+    font: inherit;
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+    font: 300 14px/26px "Roboto", arial, sans-serif;
+    color: #222;
+}
+
+b, strong {
+    font-weight: 600;
+}
+
+/*==========  Style Sheet - Placeholders  ==========*/
+::-webkit-input-placeholder {
+    color: #736666;
+    font: inherit;
+}
+
+::-moz-placeholder {
+    color: #736666;
+    font: inherit;
+}
+
+:-moz-placeholder {
+    color: #736666;
+    font: inherit;
+}
+
+:-ms-input-placeholder {
+    color: #736666;
+    font: inherit;
+}
+
+/*==========  Style Sheet - Third-party  ==========*/
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-strike {
+    text-decoration: line-through;
+}
+
+.text-muted {
+    color: #a1a1a1;
+}
+
+.hidden {
+    display: none;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+.cf:before, .cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.dev-pages {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    padding: 20px;
+    background: white;
+    border-bottom: 1px solid silver;
+    -webkit-transform: translate(0, -100%);
+    transform: translate(0, -100%);
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+
+.dev-pages h1 {
+    margin: 0 0 10px;
+    font: 300 18px/40px "Roboto", arial, sans-serif;
+}
+
+.dev-pages ul {
+    *zoom: 1;
+}
+
+.dev-pages ul:before, .dev-pages ul:after {
+    content: " ";
+    display: table;
+}
+
+.dev-pages ul:after {
+    clear: both;
+}
+
+.dev-pages ul li {
+    display: inline-block;
+    display: block;
+    float: left;
+    text-transform: uppercase;
+    margin: 0 10px 10px 0;
+}
+
+.dev-pages ul li a {
+    display: inline-block;
+    border: 1px solid transparent;
+    background: #606060;
+    font: 400 16px/36px "Roboto", arial, sans-serif;
+    padding: 0 16px;
+    color: white;
+    text-decoration: none;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+
+.dev-pages ul li a:hover {
+    color: #202020;
+    border-color: silver;
+    background-color: white;
+}
+
+.dev-pages .show {
+    position: absolute;
+    top: 100%;
+    left: 100px;
+    padding: 8px;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+}
+
+.dev-pages .show .mdi {
+    display: none;
+    font-size: 20px;
+}
+
+.dev-pages .show .mdi:first-of-type {
+    display: block;
+}
+
+.dev-pages .show:hover {
+    color: orange;
+}
+
+.dev-pages:hover, .dev-pages.active {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+.dev-pages:hover .show .mdi:first-of-type {
+    display: none;
+}
+
+.dev-pages:hover .show .mdi:nth-child(3n+2) {
+    display: block;
+}
+
+.dev-pages.active .show .mdi:first-of-type, .dev-pages.active .show .mdi:nth-child(3n+2) {
+    display: none;
+}
+
+.dev-pages.active .show .mdi:last-of-type {
+    display: block;
+}
+
+.button {
+    height: 60px;
+    padding: 10px 30px;
+    font: 600 16px/40px "Roboto", arial, sans-serif;
+    color: #333;
+    display: inline-block;
+}
+
+.button.button-primary {
+    color: #fff;
+    background-color: #01689b;
+}
+
+.button.button-primary-inverse {
+    color: #01689b;
+    background-color: #fff;
+}
+
+.button.button-wide {
+    width: 100%;
+}
+
+.button.button-sm {
+    height: 50px;
+    line-height: 30px;
+}
+
+.button[disabled], .button.button-disabled {
+    background-color: #cccccc;
+    color: #fff;
+}
+
+.welcome-navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+}
+
+.welcome-navbar .power,
+.welcome-navbar .qrcode {
+    float: right;
+    color: #fff;
+    height: 45px;
+    width: 45px;
+    font-size: 35px;
+    text-align: center;
+    line-height: 45px;
+    display: block;
+}
+
+.welcome-navbar .qrcode {
+    color: #003047;
+    float: left;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.welcome-logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    margin-left: -10px;
+}
+
+.welcome-logo img {
+    margin-right: 20px;
+    height: 60px;
+    width: 60px;
+    display: block;
+    float: left;
+}
+
+.welcome-logo span {
+    font: 600 25px/60px "Roboto", arial, sans-serif;
+    color: #fff;
+}
+
+.text {
+    font: 600 16px/24px "Roboto", arial, sans-serif;
+    color: #333;
+    margin: 0 0 30px;
+}
+
+.vote .vote-title {
+    font: 600 16px/24px "Roboto", arial, sans-serif;
+    color: #333;
+    margin: 0 0 15px;
+    text-align: center;
+}
+
+.vote .vote-description {
+    font: 400 15px/24px "Roboto", arial, sans-serif;
+    color: #333;
+    margin: 0 0 30px;
+    text-align: justify;
+}
+
+.vote .vote-list {
+    margin-bottom: 20px;
+}
+
+.vote .vote-list .vote-item {
+    font: 500 15px/24px "Roboto", arial, sans-serif;
+    color: #666;
+    width: 100%;
+    margin-bottom: 30px;
+    min-height: 50px;
+    padding: 20px 0;
+    padding-right: 70px;
+    position: relative;
+}
+
+.vote .vote-list .vote-item .vote-item-circle {
+    float: right;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #01689b;
+    border-radius: 50px;
+    margin-left: 20px;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.vote .vote-list .vote-item .vote-item-circle .mdi {
+    font-size: 30px;
+    line-height: 44px;
+    display: none;
+    color: #fff;
+}
+
+.vote .vote-list .vote-item input[type=radio]:checked + label .vote-item-circle {
+    background-color: #01689b;
+}
+
+.vote .vote-list .vote-item input[type=radio]:checked + label .vote-item-circle .mdi {
+    display: block;
+}
+
+.vote .vote-list .vote-item:last-child {
+    margin-bottom: 0;
+}
+
+.app-view {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    position: fixed;
+}
+
+.app-view .app-container {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    padding: 30px;
+    bottom: 80px;
+    overflow-y: scroll;
+}
+
+.app-view .app-container.app-container-inverse {
+    background-color: #01689b;
+}
+
+.app-view .app-footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.app-view .app-footer .button {
+    height: 80px;
+    padding: 20px;
+    line-height: 40px;
+}
+
+.app-view.app-view-ios {
+    top: 30px;
+}
+
+.popups {
+    position: relative;
+    z-index: 1;
+}
+
+.popups .popup {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    position: fixed;
+    display: none;
+}
+
+.popups .popup .popup-backdrop {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: #fff;
+    opacity: .95;
+    cursor: pointer;
+}
+
+.popups .popup .popup-heading {
+    font: 600 18px/32px "Roboto", arial, sans-serif;
+    margin-bottom: 20px;
+    color: #083f49;
+    text-align: center;
+}
+
+.popups .popup .popup-inner {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    background-color: #fff;
+    padding: 20px 50px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.popups .popup .popup-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 30px;
+    line-height: 30px;
+    width: 30px;
+    text-align: center;
+    color: #666;
+}
+
+.popups .popup .modal-notification {
+    text-align: center;
+}
+
+.popups .popup .modal-notification .modal-notification-title {
+    color: #083f49;
+    font: 600 36px/1.2em "Roboto", arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+.popups .popup .modal-notification .modal-notification-title .mdi {
+    display: inline-block;
+    margin: 0px;
+    color: #017f96;
+    font-size: 60px;
+    line-height: 1.4em;
+    vertical-align: middle;
+    display: block;
+}
+
+.popups .popup .modal-notification .modal-notification-desc {
+    color: #2e525a;
+    font: 400 13px/1.2em "Roboto", arial, sans-serif;
+}
+
+.popups .popup .modal-notification .modal-notification-desc-lg {
+    color: #2e525a;
+    font: 400 15px/1.4em "Roboto", arial, sans-serif;
+    margin-bottom: 15px;
+}
+
+.popups .popup .modal-notification.modal-notification-danger .modal-notification-title .mdi {
+    color: #d21515;
+}
+
+.popups .popup .modal-notification.modal-notification-info .modal-notification-title .mdi {
+    color: #167cce;
+}
+
+.popups .popup.active {
+    display: block;
+}
+
+.popups .popup.popup-notification .popup-inner {
+    max-width: 100%;
+    width: 500px;
+    padding: 30px;
+    background: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.popups .popup.popup-notification .popup-content {
+    background: #fff;
+    position: relative;
+    max-width: 100%;
+    padding: 40px 30px;
+    -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 1000px) {
+    .popups .popup-inner {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        position: fixed;
+        -webkit-transform: none;
+        transform: none;
+        overflow: auto;
+        padding: 30px;
+    }
+    .popups .popup-close {
+        position: fixed;
+    }
+}

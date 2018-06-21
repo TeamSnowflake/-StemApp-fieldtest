@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>StemApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="frame-src * gap://ready; default-src 'self' gap://ready file://* *; connect-src * blob: data:; style-src * 'unsafe-inline'; script-src * 'unsafe-eval' 'unsafe-inline'; img-src data: *">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700,700italic,500italic,500,400italic,300,100italic,100,300italic&amp;subset=latin,cyrillic,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/dist/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/dist/angular/angular-csp.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+  </head>
+  <body ng-controller="BaseController" id="StemApp">
+    <header></header>
+    <ui-view></ui-view>
+    <footer></footer>
+    <div class="popups">
+      <div ng-repeat="modal in $root.modals.modals() track by $index" popup-modal modal="modal"></div>
+    </div>
+    <script>var qdt_c = {"platform":{"source":"phonegap-app","libs":{"jquery":true,"bootstrap_3":false,"angular":true,"angular_2":false,"underscore":false,"underscore.string":false,"mdi":true},"libs_data":{},"paths":{"root":"../phonegap/www","assets_root":"../phonegap/www/assets","clean_paths":["../phonegap/www"]},"assets":[{"from":"resources/**/*","to":""},{"from":"../../node_modules/@uirouter/angularjs/release/angular-ui-router.min.js","to":"assets/dist/@uirouter/angularjs"},{"from":"../../node_modules/@uirouter/angularjs/release/stateEvents.min.js","to":"assets/dist/@uirouter/angularjs"}],"server":{"path":"/","port":4500},"tasks":{"disabled":{"pug":false,"js":false,"assets":false},"settings":{"js":[{"src":["angular/StemApp.js","app.js"],"watch":["angular/**/*"],"dest":["/"],"name":"app.js","minify":true,"sourcemap":true,"browserify":true}],"scss":[{"src":["style.scss"],"watch":["includes/**/*.scss"],"path":"/","name":"style.min.css","minify":false,"dest":["/"]}],"pug":[{"path":"/","src":["index.pug"],"watch":["layout/**/*.pug"],"dest":["/"]},{"path":"/","src":["templates/**/*.pug"],"dest":["/assets"],"watch":[]}]}},"name":"phonegap"}};
+      var env  = {"html5Mode":{"enable":false,"basePath":"/"},"apiUrl":"https://stemappapi.ddns.net/api"};
+      
+    </script>
+    <script src="assets/dist/jquery/jquery.min.js"></script>
+    <script src="assets/dist/angular/angular.min.js"></script>
+    <script src="assets/dist/@uirouter/angularjs/angular-ui-router.min.js"></script>
+    <script src="assets/dist/@uirouter/angularjs/stateEvents.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
